@@ -1,0 +1,26 @@
+DROP SEQUENCE SQ_RBOARD;
+DROP TABLE TB_RBOARD;
+
+CREATE TABLE TB_RBOARD(
+bno NUMBER NOT NULL CONSTRAINT PK_RBOARD PRIMARY KEY,
+rbWriter VARCHAR2(50),
+rbSubject VARCHAR2(50),
+rbContent VARCHAR2(1000),
+viewCount NUMBER default 0,
+deleteYn VARCHAR(1) default 'N',
+insertTime VARCHAR2(255),
+updateTime VARCHAR2(255),
+deleteTime VARCHAR2(255),
+rbRef NUMBER default 0,
+rbStep NUMBER default 0,
+rbLevel NUMBER default 0
+);
+
+
+CREATE sequence SQ_RBOARD
+START WITH 1
+INCREMENT BY 1;
+
+
+
+
