@@ -1,21 +1,37 @@
 DROP SEQUENCE SQ_RBOARD;
-DROP TABLE TB_RBOARD;
+DROP TABLE TB_RBOARD CASCADE CONSTRAINT;
 
-CREATE TABLE TB_RBOARD(
-bno NUMBER NOT NULL CONSTRAINT PK_RBOARD PRIMARY KEY,
-rbWriter VARCHAR2(50),
-rbSubject VARCHAR2(50),
-rbContent VARCHAR2(1000),
-viewCount NUMBER default 0,
-deleteYn VARCHAR(1) default 'N',
-insertTime VARCHAR2(255),
-updateTime VARCHAR2(255),
-deleteTime VARCHAR2(255),
-rbRef NUMBER default 0,
-rbStep NUMBER default 0,
-rbLevel NUMBER default 0
+DROP TABLE TB_FILE_DB CASCADE CONSTRAINT;
+
+CREATE TABLE TB_FILE_DB
+(
+    UUID         VARCHAR2(1000) NOT NULL
+        CONSTRAINT PK_FILE_DB PRIMARY KEY, -- 파일 UUID
+    FILE_TITLE   VARCHAR2(1000),           -- 제목
+    FILE_CONTENT VARCHAR2(1000),           -- 내용
+    FILE_NAME    VARCHAR2(1000),           -- 파일명
+    FILE_DATA    BLOB,                     -- 바이너리 파일(이미지파일)
+    FILE_URL     VARCHAR2(1000),           -- 파일 다운로드 URL
+    DELETE_YN    VARCHAR2(1) DEFAULT 'N',
+    INSERT_TIME  VARCHAR2(255),
+    UPDATE_TIME  VARCHAR2(255),
+    DELETE_TIME  VARCHAR2(255)
 );
 
+CREATE TABLE TB_RBOARD(
+                          BNO NUMBER NOT NULL CONSTRAINT PK_RBOARD PRIMARY KEY,
+                          RB_WRITER VARCHAR2(50),
+                          RB_SUBJECT VARCHAR2(50),
+                          RB_CONTENT VARCHAR2(1000),
+                          RB_VIEW_COUNT NUMBER default 0,
+                          DELETE_YN VARCHAR(1) default 'N',
+                          INSERT_TIME VARCHAR2(255),
+                          UPDATE_TIME VARCHAR2(255),
+                          DELETE_TIME VARCHAR2(255),
+                          RB_REF NUMBER default 0,
+                          RB_STEP NUMBER default 0,
+                          RB_LEVEL NUMBER default 0
+);
 
 CREATE sequence SQ_RBOARD
 START WITH 1

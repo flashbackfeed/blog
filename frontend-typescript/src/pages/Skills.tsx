@@ -7,7 +7,6 @@ function Skill() {
     initMain();
   }, []);
 
-  
   return (
     <>
       {/* <!-- Page Header Start --> */}
@@ -24,7 +23,6 @@ function Skill() {
       </div>
       {/* <!-- Page Header End --> */}
 
-      {/* todo : 자세히보기 누르면 iframe 이용해서 사용할수있는 기술 상세보기 */}
       {/* <!-- Skill Start --> */}
       <div className="container-xxl py-5">
         <div className="container">
@@ -53,15 +51,17 @@ function Skill() {
                       alt="Icon"
                     />
                   </div>
-                  <h5 className="mb-3">Spring boot</h5>
+                  <h5 className="mb-3">Spring Boot</h5>
                 </div>
                 <div className="service-btn rounded-0 rounded-bottom">
-                  <a
-                    className="text-primary fw-medium"
-                    href="#exapleModalLabel"
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#SpringBootModal"
                   >
                     Read More<i className="bi bi-chevron-double-right ms-2"></i>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -84,9 +84,14 @@ function Skill() {
                   <h5 className="mb-3">React</h5>
                 </div>
                 <div className="service-btn rounded-0 rounded-bottom">
-                  <a className="text-primary fw-medium" href="">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#ReactModal"
+                  >
                     Read More<i className="bi bi-chevron-double-right ms-2"></i>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -109,9 +114,14 @@ function Skill() {
                   <h5 className="mb-3">Oracle DataBase</h5>
                 </div>
                 <div className="service-btn rounded-0 rounded-bottom">
-                  <a className="text-primary fw-medium" href="">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#OracleModal"
+                  >
                     Read More<i className="bi bi-chevron-double-right ms-2"></i>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -134,9 +144,14 @@ function Skill() {
                   <h5 className="mb-3">Type Script</h5>
                 </div>
                 <div className="service-btn rounded-0 rounded-bottom">
-                  <a className="text-primary fw-medium" href="">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#TypeScriptModal"
+                  >
                     Read More<i className="bi bi-chevron-double-right ms-2"></i>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -160,9 +175,14 @@ function Skill() {
                   <h5 className="mb-3">Docker</h5>
                 </div>
                 <div className="service-btn rounded-0 rounded-bottom">
-                  <a className="text-primary fw-medium" href="">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#DockerModal"
+                  >
                     Read More<i className="bi bi-chevron-double-right ms-2"></i>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -186,9 +206,14 @@ function Skill() {
                   <h5 className="mb-3">JAVA</h5>
                 </div>
                 <div className="service-btn rounded-0 rounded-bottom">
-                  <a className="text-primary fw-medium" href="">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#JavaModal"
+                  >
                     Read More<i className="bi bi-chevron-double-right ms-2"></i>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -212,9 +237,14 @@ function Skill() {
                   <h5 className="mb-3">HTML5</h5>
                 </div>
                 <div className="service-btn rounded-0 rounded-bottom">
-                  <a className="text-primary fw-medium" href="">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#HtmlModal"
+                  >
                     Read More<i className="bi bi-chevron-double-right ms-2"></i>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -238,9 +268,14 @@ function Skill() {
                   <h5 className="mb-3">CSS</h5>
                 </div>
                 <div className="service-btn rounded-0 rounded-bottom">
-                  <a className="text-primary fw-medium" href="">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#CssModal"
+                  >
                     Read More<i className="bi bi-chevron-double-right ms-2"></i>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -264,9 +299,14 @@ function Skill() {
                   <h5 className="mb-3">그 외...</h5>
                 </div>
                 <div className="service-btn rounded-0 rounded-bottom">
-                  <a className="text-primary fw-medium" href="">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#EtcModal"
+                  >
                     Read More<i className="bi bi-chevron-double-right ms-2"></i>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -274,7 +314,329 @@ function Skill() {
         </div>
       </div>
       {/* <!-- Skill End --> */}
-     
+
+      
+      {/* Spring boot Modal start */}
+      <div
+        className="modal fade"
+        id="SpringBootModal"
+        tabIndex={-1}
+        aria-labelledby="SpringBootModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="SpringBootModalLabel">
+                Spring Boot
+              </h1>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">...</div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Spring boot Modal end */}
+      {/* React Modal start */}
+      <div
+        className="modal fade"
+        id="ReactModal"
+        tabIndex={-1}
+        aria-labelledby="ReactModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="ReactModalLabel">
+                React
+              </h1>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">...</div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* React Modal end */}
+      {/* Oracle DB Modal start */}
+      <div
+        className="modal fade"
+        id="OracleModal"
+        tabIndex={-1}
+        aria-labelledby="OracleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="OracleModalLabel">
+                Oracle DataBase
+              </h1>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">...</div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Oracle DB Modal end */}
+
+      {/* Type Script Modal start */}
+      <div
+        className="modal fade"
+        id="TypeScriptModal"
+        tabIndex={-1}
+        aria-labelledby="TypeScriptModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="TypeScriptModalLabel">
+                Type Script
+              </h1>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">...</div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Type Script Modal end */}
+
+      {/* Docker Script Modal start */}
+      <div
+        className="modal fade"
+        id="DockerModal"
+        tabIndex={-1}
+        aria-labelledby="DockerModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="DockerModalLabel">
+                Docker
+              </h1>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">...</div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Docker Modal end */}
+
+      {/* JAVA Modal start */}
+      <div
+        className="modal fade"
+        id="JavaModal"
+        tabIndex={-1}
+        aria-labelledby="JavaModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="JavaModalLabel">
+                JAVA
+              </h1>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">...</div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* JAVA Modal end */}
+
+      {/* HTML Modal start */}
+      <div
+        className="modal fade"
+        id="HtmlModal"
+        tabIndex={-1}
+        aria-labelledby="HtmlModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="HtmlModalLabel">
+                HTML5
+              </h1>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">...</div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* HTML Modal end */}
+
+      {/* CSS Modal start */}
+      <div
+        className="modal fade"
+        id="CssModal"
+        tabIndex={-1}
+        aria-labelledby="CssModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="CssModalLabel">
+                CSS
+              </h1>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">...</div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* CSS Modal end */}
+
+      {/* ETC Modal start */}
+      <div
+        className="modal fade"
+        id="EtcModal"
+        tabIndex={-1}
+        aria-labelledby="EtcModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="EtcModalLabel">
+                ETC
+              </h1>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">...</div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* ETC Modal end */}
     </>
   );
 }

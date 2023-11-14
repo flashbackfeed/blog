@@ -6,7 +6,7 @@ import RboardService from '../../services/board/RboardService';
 
 
 
-function ThreadBoard() {
+function Rboard() {
 
  // 전체조회 페이지에서 전송한 기본키(dno)
  const { bno, rbStep } = useParams();
@@ -53,7 +53,7 @@ function ThreadBoard() {
     setRboard({ ...rboard, [name]: value });
   };
   // 수정 함수
-  const updateThreadBoard = () => {
+  const updateRboard = () => {
     RboardService.update(rboard.bno, rboard) // 백엔드로 수정요청
       .then((response: any) => {
         console.log(response.data);
@@ -70,20 +70,18 @@ function ThreadBoard() {
       .then((response: any) => {
         console.log(response.data);
         // 페이지 이동
-        navigate("/rboard/:bno");
+        navigate("/rboard");
       })
       .catch((e: Error) => {
         console.log(e);
       });
   };
 
-   // 삭제함수 : 게시물 + 답변글 2개 삭제 (그룹번호로 삭제)
-//   그룹번호(boardGroup) : 부모글번호 === 자식글번호
+
 const deleteRboard = () => {
-    RboardService.removeRboard(rboard.rbRef) // 벡엔드로 삭제요청
+    RboardService.removeRboard(rboard.rbRef) 
       .then((response: any) => {
         console.log(response.data);
-        // 페이지 이동
         navigate("/rboard");
       })
       .catch((e: Error) => {
@@ -186,7 +184,7 @@ const deleteRboard = () => {
             <button
               type="submit"
               className="btn btn-outline-success ms-2 col"
-              onClick={updateThreadBoard}
+              onClick={updateRboard}
             >
               수정
             </button>
@@ -207,4 +205,4 @@ const deleteRboard = () => {
   )
 }
 
-export default ThreadBoard
+export default Rboard

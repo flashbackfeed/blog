@@ -29,7 +29,7 @@ function RboardList() {
 
   //   전체조회 함수
   const retrieveRboard = () => {
-    RboardService.getAll(searchSubject, page - 1, pageSize) // 벡엔드 전체조회요청
+    RboardService.getAll(searchSubject, page - 1, pageSize)
       .then((response: any) => {
         const { rboard, totalPages } = response.data;
         setRboard(rboard);
@@ -37,7 +37,6 @@ function RboardList() {
         console.log("response", response.data);
       })
       .catch((e: Error) => {
-        // 벡엔드 실패시 실행됨
         console.log(e);
       });
   };
@@ -63,7 +62,6 @@ function RboardList() {
 
   // ---------------------------------------
   // todo: 답변 변수 정의
-  // reply 객체 초기화
   const initialReply = {
     bno: null,
     rbSubject: "",
@@ -74,9 +72,8 @@ function RboardList() {
     rbStep: 0,
     rbLevel: 0
   };
-  // 답변 글 입력 객체
+
   const [reply, setReply] = useState(initialReply);
-  // thread 버튼 클릭시 상태 저장할 변수 : true/false
   const [replyClicked, setReplyClicked] = useState(false);
 
   // todo: 답변 함수 정의
@@ -111,17 +108,13 @@ function RboardList() {
       });
   };
 
-  //  게시물 thread 버튼 클릭시 화면에 답변입력창 보이게 하는 함수
+
   const newReply = (data: any) => {
-    // 매개변수 데이터(객체) 수정 : boardContent: "" 수정
-    setReply({ ...data, mainText: "" });
-    // 답변 입력창 화면보이기 : replyClicked = true
+    setReply({ ...data, rbContent: "" });
     setReplyClicked(true);
   };
 
-  //  답변 입력창 숨기기
   const closeReply = () => {
-    // 답변 입력창 화면숨기기 : replyClicked = false
     setReplyClicked(false);
   };
 
@@ -341,7 +334,7 @@ function RboardList() {
 
         <div className='container'>
                 <div className="d-flex justify-content-center">
-                        <a href="/add-rboard" className="btn btn-primary  py-2 px-4">글쓰기</a>
+                        <Link to="/add-rboard" className="btn btn-primary  py-2 px-4">글쓰기</Link>
                     </div>
                     </div>
       </div>

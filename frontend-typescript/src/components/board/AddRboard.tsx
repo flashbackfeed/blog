@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import IRboard from "../../types/board/IRboard";
 import RboardService from "../../services/board/RboardService";
 import { useNavigate } from "react-router-dom";
 
 
 function AddRboard() {
+  
 
   const navigate = useNavigate();
   // todo : 변수 정의
@@ -60,9 +61,8 @@ function AddRboard() {
       });
   };
 
-  // 새폼 보여주기 함수 : 변수값 변경 -> 화면 자동 갱신(리액트 특징)
   const goHome = () => {
-    setRboard(initialRboard); // replyBoard 초기화
+    setRboard(initialRboard);
     navigate("/rboard")
   };
 

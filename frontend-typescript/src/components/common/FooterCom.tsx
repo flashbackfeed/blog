@@ -24,11 +24,10 @@ function FooterCom() {
                 </div>
                 <div className="col-lg-3 col-md-6">
                     <h4 className="text-white mb-4">Quick Links</h4>
-                    <a className="btn btn-link" href="">About Us</a>
-                    <a className="btn btn-link" href="">Contact Us</a>
-                    <a className="btn btn-link" href="">Our Services</a>
-                    <a className="btn btn-link" href="">Terms & Condition</a>
-                    <a className="btn btn-link" href="">Support</a>
+                    <a className="btn btn-link" href="/">Home</a>
+                    <a className="btn btn-link" href="/skills">Skills</a>
+                    <a className="btn btn-link" href="/rboard">Board</a>
+                    <a className="btn btn-link" href="/fileDb">Upload</a>
                 </div>
                 
                 

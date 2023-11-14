@@ -61,23 +61,28 @@ function NavCom() {
                                 <Link to="/add-rboard" className="dropdown-item">게시글 작성</Link>
                             </div>
                          </div>
+                         <div className="nav-item dropdown">
+                        <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">File Upload</a>
+                            <div className="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                                <Link to="/fileDb" className="dropdown-item">파일 조회</Link>
+                                <Link to="/add-fileDb" className="dropdown-item">파일 업로드</Link>
+                            </div>
+                         </div>
                         
-                        <Link to="/testimonial" className="nav-item nav-link">Meow</Link>
                         
                         <div className="nav-item dropdown">
-                            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Implement</a>
+                            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">미구현</a>
                             <div className="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-                                <Link to="/feature" className="dropdown-item">Account</Link>
-                                <Link to="/team" className="dropdown-item">login</Link>
-                                <Link to="/testimonial" className="dropdown-item">admin</Link>
-                                <Link to="/quote" className="dropdown-item">external api</Link>
+                                <Link to="/" className="dropdown-item">Account</Link>
+                                <Link to="/" className="dropdown-item">login</Link>
+                                <Link to="/" className="dropdown-item">external api</Link>
                             </div>
                         </div>
                     </div>
-                    {/* todo : 누르면 글작성으로 이동 */}
+                    {/* todo : 누르면 로그인창 이동
                     <div className="ms-auto d-none d-lg-block">
-                        <a href="/add-rboard" className="btn btn-primary rounded-pill py-2 px-3">글쓰기</a>
-                    </div>
+                        <a href="/" className="btn btn-primary rounded-pill py-2 px-3">로그인</a>
+                    </div> */}
                 </div>
             </nav>
         </div>
